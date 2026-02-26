@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shivaji Maharaj </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">SHIVAJI MAHARAJ</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="quiz.html">Quiz</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="activity.html">Activity</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Navbar End -->
+ <!-- section -->
+  <section class="info-hub">
+    <div class="container">
+        <h2 class="section-title">Empire Administration</h2>
+        
+        <div class="info-btn-group">
+            <button class="tab-link active" onclick="openInfo(event, 'AshtaPradhan')">Ashta Pradhan</button>
+            <button class="tab-link" onclick="openInfo(event, 'Taxation')">Revenue System</button>
+            <button class="tab-link" onclick="openInfo(event, 'Navy')">The Naval Force</button>
+        </div>
+
+        <div id="AshtaPradhan" class="tab-content default-open">
+            <div class="tab-flex">
+                <div class="text-side">
+                    <h3>The Council of Eight</h3>
+                    <p>Shivaji Maharaj established a council of eight ministers, known as the <strong>Ashta Pradhan</strong>, to ensure smooth governance. Each minister was responsible for a specific department like Finance, Internal Security, and Foreign Affairs.</p>
+                </div>
+                <div class="img-side">
+                    <img src="image/ashta.jpg" alt="Administration Seal">
+                </div>
+            </div>
+        </div>
+
+        <div id="Taxation" class="tab-content">
+            <div class="tab-flex">
+                <div class="text-side">
+                    <h3>Ryotwari System</h3>
+                    <p>He abolished the oppressive Zamindari system and introduced the <strong>Ryotwari system</strong>, where the state dealt directly with the farmers. This ensured that peasants were not exploited by middle-men.</p>
+                </div>
+                <div class="img-side">
+                    <img src="image/ryotwari.jpg" alt="Agriculture">
+                </div>
+            </div>
+        </div>
+
+        <div id="Navy" class="tab-content">
+            <div class="tab-flex">
+                <div class="text-side">
+                    <h3>Father of Indian Navy</h3>
+                    <p>Maharaj realized that "He who has the navy, has the sea." He built a formidable naval force and sea forts like <strong>Sindhudurg</strong> and <strong>Vijaydurg</strong> to protect the Konkan coast.</p>
+                </div>
+                <div class="img-side">
+                    <img src="image/naval.jpg" alt="Naval Ships">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  <!-- end section -->
+ <!-- Quiz start -->
+  <section class="quiz-section">
+    <div class="glass-panel quiz-container">
+        <h3 id="quiz-title">Test Your Knowledge</h3>
+        <div id="question-container">
+            <h2 id="question-text">Ready to start the quiz?</h2>
+            <div id="answer-buttons" class="btn-grid">
+                <button class="quiz-btn" onclick="startQuiz()">Start Quiz</button>
+            </div>
+        </div>
+        <div id="quiz-results" class="hidden"></div>
+        
+        
+        
+    </div>
+</section>
+<!-- Quiz end -->
+
+
+
+
+ <!-- footer section -->
+  <footer class="bg-dark text-white pt-5">
+        <div class="container text-center pb-3">
+            <h3 class="text-warning">Jai Bhavani, Jai Shivaji</h3>
+            <p>Respectfully preserving the history of the legendary Maratha King.</p>
+            <div class="mt-4">
+                <a href="about.html" class="btn btn-outline-warning btn-sm mx-1">History</a>
+                <a href="quiz.html" class="btn btn-outline-warning btn-sm mx-1">Quiz</a>
+                <a href="activity.html" class="btn btn-outline-warning btn-sm mx-1">Activity</a>
+            </div>
+            <hr class="mt-4 bg-secondary">
+            <p class="small text-secondary mb-0">© 2026 Tribute Website | Developed by Jyoti</p>
+        </div>
+    </footer>
+  <!-- footer section end -->
+
+
+
+<script>
+  // --- 2. QUIZ LOGIC ---
+const quizData = [
+    { q: "Which fort was the capital of Shivaji Maharaj?", a: ["Raigad", "Shivneri"], correct: 0 },
+    { q: "Who is known as the 'Father of Indian Navy'?", a: ["Sambhaji Maharaj", "Shivaji Maharaj"], correct: 1 },
+    { q: "In which year was Shivaji Maharaj coronated?", a: ["1674", "1680"], correct: 0 },
+    { q: "Which of these was NOT a title held by Shivaji Maharaj?", a: ["Chhatrapati", "Maharana"], correct: 1 },
+    { q: "Which fort was the first to be captured by Shivaji Maharaj?", a: ["Torna", "Rajgad"], correct: 0 },
+    { q: "Which of these was a major adversary of Shivaji Maharaj?", a: ["Mughal Empire", "British East India Company"], correct: 0},
+    { q: "Which of these was a major battle fought by Shivaji Maharaj?", a: ["Battle of Panipat", "Battle of Pratapgad"], correct: 1},
+    { q: "Which of these was a major naval battle fought by Shivaji Maharaj?", a: ["Battle of Colaba", "Battle of Salher"], correct: 0},
+    { q: "Which of these was a major administrative reform implemented by Shivaji Maharaj?", a: ["Zamindari System", "Ashta Pradhan Council"], correct: 1},
+    { q: "Which of these was a major cultural contribution of Shivaji Maharaj?", a: ["Promotion of Marathi Language", "Construction of Taj Mahal"], correct: 0},
+    { q: "Which of these was a major religious policy of Shivaji Maharaj?", a: ["Religious Tolerance", "Forced Conversions"], correct: 0},
+    { q: "Which of these was a major economic policy of Shivaji Maharaj?", a: ["Land Revenue System", "Free Trade Policy"], correct: 0},
+    { q: "Which of these was a major military strategy used by Shivaji Maharaj?", a: ["Guerrilla Warfare", "Trench Warfare"], correct: 0},
+    { q: "Which of these was a major diplomatic strategy used by Shivaji Maharaj?", a: ["Alliances with European Powers", "Non-Alignment"], correct: 0},
+    { q: "Which of these was a major legacy of Shivaji Maharaj?", a: ["Inspiration for Indian Independence Movement", "Establishment of British Raj"], correct: 0}
+];
+
+let currentQuestion = 0;
+
+function startQuiz() {
+    currentQuestion = 0;
+    showQuestion();
+}
+
+function showQuestion() {
+    const q = quizData[currentQuestion];
+    const text = document.getElementById('question-text');
+    const btnContainer = document.getElementById('answer-buttons');
+    
+    text.innerText = q.q;
+    btnContainer.innerHTML = "";
+    
+    q.a.forEach((ans, index) => {
+        const btn = document.createElement('button');
+        btn.innerText = ans;
+        btn.className = "quiz-btn";
+        btn.onclick = () => checkAnswer(index);
+        btnContainer.appendChild(btn);
+    });
+}
+
+function checkAnswer(idx) {
+    if(idx === quizData[currentQuestion].correct) {
+        alert("Correct! 🚩");
+    } else {
+        alert("Wrong answer, try again.");
+    }
+    
+    currentQuestion++;
+    if(currentQuestion < quizData.length) {
+        showQuestion();
+    } else {
+        document.getElementById('question-container').innerHTML = "<h3>Jai Shivaji! You finished the quiz.</h3>";
+    }
+}
+document.getElementById('restartBtn').addEventListener('click', () => {
+    // Saare udte huye particles saaf karo
+    confetti.reset();
+
+    // UI ko wapas purana jaisa karo
+    document.getElementById('options').style.display = 'block';
+    document.getElementById('question').style.display = 'block';
+    document.getElementById('result-screen').style.display = 'none';
+}
+);
+function openInfo(evt, sectionName) {
+    // 1. Declare all variables
+    let i, tabcontent, tablinks;
+
+    // 2. Get all elements with class="tab-content" and hide them
+    tabcontent = document.getElementsByClassName("tab-content");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // 3. Get all buttons with class="tab-link" and remove the class "active"
+    tablinks = document.getElementsByClassName("tab-link");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // 4. Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(sectionName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+   </body>
+   </html>

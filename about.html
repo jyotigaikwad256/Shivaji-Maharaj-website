@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shivaji Maharaj</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">SHIVAJI MAHARAJ</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="quiz.html">Quiz</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="activity.html">Activity</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Navbar End -->
+ <!-- about -->
+  <section id="maharaj-hero">
+    <div class="glass-container">
+        <h1 class="main-heading">The Legend of Chhatrapati</h1>
+        <div id="display-area" class="fade-in">
+            <h2 id="feature-title">The Visionary King</h2>
+            <p id="feature-desc">Chhatrapati Shivaji Maharaj was a visionary leader who founded the Maratha Empire in the 17th century. His innovative military tactics, administrative reforms, and commitment to justice made him a revered figure in Indian history.</p>
+           
+        </div>
+        
+        <div class="card-grid">
+            <div class="nav-card" onclick="updateDisplay('warfare')">
+                <i class="icon">⚔️</i>
+                <span>Guerrilla Warfare</span>
+            </div>
+            <div class="nav-card" onclick="updateDisplay('navy')">
+                <i class="icon">⚓</i>
+                <span>Naval Might</span>
+            </div>
+            <div class="nav-card" onclick="updateDisplay('forts')">
+                <i class="icon">🏰</i>
+                <span>The Forts</span>
+            </div>
+            <div class="nav-card" onclick="updateDisplay('justice')">
+                <i class="icon">⚖️</i>
+                <span>Ethical Rule</span>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- aboutend -->
+ <!-- section1 -->
+  <div class="history-dropdown-container">
+  <h2 class="section-title">Chapters of Swarajya</h2>
+  
+  <div class="dropdown-item">
+    <button class="dropdown-header" onclick="toggleDropdown(this)">
+      <span>01. The Administrative Council (Ashta Pradhan)</span>
+      <i class="arrow">▼</i>
+    </button>
+    <div class="dropdown-content">
+      <p>Shivaji Maharaj established a council of eight ministers to ensure efficient governance. This included roles like the <strong>Peshwa</strong> (Prime Minister) and <strong>Amatya</strong> (Finance Minister).</p>
+    </div>
+  </div>
+
+  <div class="dropdown-item">
+    <button class="dropdown-header" onclick="toggleDropdown(this)">
+      <span>02. Naval Intelligence & Vision</span>
+      <i class="arrow">▼</i>
+    </button>
+    <div class="dropdown-content">
+      <p>Chhatrapati Shivaji Maharaj is recognized as the "Father of the Indian Navy" for his visionary 17th-century maritime strategy,<br> which was integral to his conception of Hindavi Swarajya
+         (self-rule).His approach combined naval intelligence, local shipbuilding, and a robust defense structure to secure the<br> Konkan coastline against European colonial powers and regional rivals like the Siddis.
+         he built a formidable force and sea forts like <strong>Sindhudurg</strong> to protect the coast from colonial powers.</p>
+    </div>
+  </div>
+
+  <div class="dropdown-item">
+    <button class="dropdown-header" onclick="toggleDropdown(this)">
+      <span>03. The Coronation (1674)</span>
+      <i class="arrow">▼</i>
+    </button>
+    <div class="dropdown-content">
+      <p>Shivaji Maharaj was crowned at <strong>Raigad Fort</strong> in 1674. Raigad became the capital of the Maratha Empire and symbolizes the birth of Hindavi Swaraj. 
+        <br>The fort, located in Maharashtra's Sahyadri range, is renowned for its strategic and historical importance.</p>
+    </div>
+  </div>
+</div>
+<!-- section1 -->
+<!-- section2 -->
+   <section class="container mb-5">
+        <h2 class="text-center mt-5">Architectural Marvels</h2>
+        <div class="row g-4">
+            <div class="col-md-4 reveal">
+                <div class="card h-100 shadow border-0">
+                   <a href="https://en.wikipedia.org/wiki/Raigad_Fort"><img src="image/raigad.webp" class="card-img-top" alt="Raigad Fort"></a>
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Raigad Fort</h5>
+                        <p class="card-text">The capital fort where the coronation took place in 1674.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 reveal">
+                <div class="card h-100 shadow border-0">
+                  <a href="https://en.wikipedia.org/wiki/Sindhudurg_Fort"><img src="image/Sindhudurg.jpg" class="card-img-top" alt="Sindhudurg"></a>
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Sindhudurg</h5>
+                        <p class="card-text">An ocean fort built to challenge foreign naval powers.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 reveal">
+                <div class="card h-100 shadow border-0">
+                    <a href="https://en.wikipedia.org/wiki/Pratapgad"><img src="image/Pratapgad.jpg" class="card-img-top" alt="Pratapgad"></a>
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Pratapgad</h5>
+                        <p class="card-text">The site of the historic victory over Afzal Khan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ <!-- section2 end -->
+  <!-- image -->
+   <h2 class="text-center mt-5 pt-5">Fort Gallery</h2>
+   <div class="scroll-wrapper">
+    
+    <button class="nav-btn left" onclick="scrollGallery(-1)">&#10094;</button>
+    
+    <div class="gallery-container" id="gallery">
+        <div class="gallery-item">
+            <img src="image/shivneri.jpg" alt="Shivneri Fort">
+        
+        </div>
+        <div class="gallery-item">
+            <img src="image/torna.avif" alt="Torna Fort">
+            
+        </div>
+        <div class="gallery-item">
+            <img src="image/raigad1.jpg" alt="Raigad Fort">
+            
+        </div>
+        <div class="gallery-item">
+            <img src="image/sindhudurg_fort.jpg" alt="Sindhudurg">
+            
+        </div>
+        <div class="gallery-item">
+            <img src="image/Pratapgad.jpg" alt="Pratapgad">
+            
+        </div>
+        <div class="gallery-item">
+            <img src="image/panhala-fort-01.jpg" alt="Panhala Fort">
+            
+        </div>
+        <div class="gallery-item">
+            <img src="image/Lonavala_Lohagad.jpg" alt="Lohagad Fort">
+            
+        </div>
+        <div class="gallery-item">
+            <img src="image/salher-trek.jpg" alt="Salher Trek">
+            
+        </div>
+        <div class="gallery-item">
+            <img src="image/Khanderi-Island.jpg" alt="Khanderi Island">
+            
+        </div>
+    </div>
+
+    <button class="nav-btn right" onclick="scrollGallery(1)">&#10095;</button>
+</div>
+   <!-- immage end -->
+
+
+ <!-- footer section -->
+  <footer class="bg-dark text-white pt-5">
+        <div class="container text-center pb-3">
+            <h3 class="text-warning">Jai Bhavani, Jai Shivaji</h3>
+            <p>Respectfully preserving the history of the legendary Maratha King.</p>
+            <div class="mt-4">
+                <a href="about.html" class="btn btn-outline-warning btn-sm mx-1">History</a>
+                <a href="quiz.html" class="btn btn-outline-warning btn-sm mx-1">Quiz</a>
+                <a href="activity.html" class="btn btn-outline-warning btn-sm mx-1">Activity</a>
+            </div>
+            <hr class="mt-4 bg-secondary">
+            <p class="small text-secondary mb-0">© 2026 Tribute Website | Developed by jyoti</p>
+        </div>
+    </footer>
+  <!-- footer section end -->
+
+
+<script>
+ const historyData = {
+    warfare: {
+        title: "Ganimi Kava (Guerrilla Tactics)",
+        desc: "Shivaji Maharaj mastered the art of leveraging geography. Using speed and surprise, he defeated much larger armies in the Sahyadri mountains."
+    },
+    navy: {
+        title: "Father of Indian Navy",
+        desc: "He was the first Indian ruler of his era to realize that 'He who rules the seas, rules the land.' He built a formidable fleet of 400+ ships."
+    },
+    forts: {
+        title: "The Backbone of Swarajya",
+        desc: "From Raigad to Pratapgad, he controlled over 300 forts, turning the Maratha empire into an impenetrable mountain fortress."
+    },
+    justice: {
+        title: "The People's King",
+        desc: "His administration was famous for its strict code of conduct, women's safety, and the 'Ashta Pradhan' council of ministers."
+    }
+};
+
+function updateDisplay(key) {
+    const area = document.getElementById('display-area');
+    
+    // Trigger fade-out
+    area.style.opacity = 0;
+    
+    setTimeout(() => {
+        document.getElementById('feature-title').innerText = historyData[key].title;
+        document.getElementById('feature-desc').innerText = historyData[key].desc;
+        // Trigger fade-in
+        area.style.opacity = 1;
+    }, 300);
+}
+
+function toggleDropdown(element) {
+    const parent = element.parentElement;
+    const content = element.nextElementSibling;
+    const allItems = document.querySelectorAll('.dropdown-item');
+
+    // Close other open items (Optional: Creates a true accordion)
+    allItems.forEach(item => {
+        if (item !== parent) {
+            item.classList.remove('active');
+            item.querySelector('.dropdown-content').style.maxHeight = null;
+        }
+    });
+
+    // Toggle current item
+    parent.classList.toggle('active');
+
+    if (parent.classList.contains('active')) {
+        // Sets height to the actual content size for smooth animation
+        content.style.maxHeight = content.scrollHeight + "px";
+    } else {
+        content.style.maxHeight = null;
+    }
+}
+// Gallery Scroll Logic
+function scrollGallery(direction) {
+    const gallery = document.getElementById('gallery');
+    const scrollAmount = 320; // Width of one item + gap
+
+    gallery.scrollBy({
+        left: direction * scrollAmount,
+        behavior: 'smooth'
+    });
+}
+
+
+
+</script>
+
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+   </body>
+   </html>

@@ -1,0 +1,379 @@
+body {
+    background-color: #fff9e6; /* Soft cream */
+    font-family: 'Comic Sans MS', cursive;
+    text-align: center;
+    
+}
+
+.navbar{
+    background-color: #ff8c00;
+}
+.nav-link{
+  color:aliceblue;
+  font-size:1.5rem;
+}
+.navbar-brand {
+  font-size:2rem;
+}
+#celebrateBtn {
+    padding: 15px 40px;
+    font-size: 24px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ffd000ec, #e97649);
+    color: rgb(22, 22, 22);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    transition: 0.2s;
+}
+
+#celebrateBtn:active {
+    transform: scale(0.9);
+}
+.wisdom-section { padding: 50px 10%; background: #fff9e6; }
+.wisdom-card {
+    background: linear-gradient(145deg, #faf5f5, #faf7f7);
+    padding: 40px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px #f1bf18d8;
+
+}
+
+.quote-text {
+    font-style: italic;
+    font-size: 1.5rem;
+    margin: 20px 0;
+    color: #ff8c00;
+}
+ .img1{
+    border-radius:20px;
+}
+.herosection h2{
+    color:#fc4902;
+    font-weight:bolder;
+}
+
+/* Card Hover Animation */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(233, 171, 2, 0.637) !important;
+}
+
+/* Scroll Reveal Animation Classes */
+.reveal {
+    /* opacity: 0; */
+    transform: translateY(50px);
+    transition: all 1s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+.quiz-section { padding: 60px 10%; background:#fff9e6; }
+.btn-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-top: 20px; }
+.quiz-btn {
+    padding: 20px;
+    background:#ce9f0633;
+    color: rgb(5, 5, 5);
+    border: 1px solid #ff8c00;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1.5rem;
+}
+.quiz-btn:hover { background: #ff8c00; }
+.hidden { display: none; }
+
+#maharaj-hero {
+    background: linear-gradient(rgba(241, 211, 156, 0.7), rgba(236, 190, 38, 0.7)), url('image/maharaj-hero.jpg') no-repeat center center;
+    background-size: cover;
+    color: rgb(12, 12, 12);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.glass-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 900px;
+    margin: auto;
+    border: 1px solid rgba(12, 12, 12, 0.918);
+}
+
+.card-grid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.nav-card {
+    background: #ff8c00;
+    padding: 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+    width: 150px;
+}
+
+.nav-card:hover {
+    transform: translateY(-10px);
+    background: #e67e00;
+}
+
+#display-area {
+    transition: opacity 0.4s ease-in-out;
+    margin: 40px 0;
+}
+
+.main-heading {
+    font-size: 2.5rem;
+    color: #2e2d2a;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.seal-item {
+    border: 2px solid #FF9933;
+    border-radius: 50%; /* Makes it look like a Royal Seal */
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.seal-item:hover {
+    background: #FF9933;
+    color: white;
+    transform: scale(1.1);
+}
+.history-dropdown-container {
+    max-width: 500%;
+    margin: 50px auto;
+    font-family: 'Inter', sans-serif;
+}
+
+.dropdown-item {
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+}
+
+.dropdown-header {
+    width: 100%;
+    padding: 20px;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    transition: background 0.3s, color 0.3s;
+}
+
+.dropdown-header:hover {
+    background-color: #fffaf0;
+    color: #ff8c00; /* Saffron hover */
+}
+
+.dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    background-color: #fff;
+}
+
+.dropdown-content p {
+    padding: 0 20px 20px 20px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.dropdown-item.active .arrow {
+    transform: rotate(180deg);
+    transition: 0.3s;
+}
+footer{
+    margin-top: 100px;
+}
+.scroll-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.gallery-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 0;
+    scrollbar-width: none; /* Firefox */
+}
+
+.gallery-container::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+.gallery-item {
+    min-width: 300px;
+    background: rgb(37, 36, 36);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.item-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.nav-btn {
+    background: #ff8c00;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 1.2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.nav-btn:hover { background: #333231; }
+.info-hub { padding: 80px 10%; background: #f0d488c2; color: rgb(26, 25, 25); }
+
+.info-btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.tab-link {
+    background: #f0de91;
+    border: 2px solid #ff8c00;
+    color: #ff8c00;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.tab-link:hover, .tab-link.active {
+    background: #ff8c00;
+    color: rgb(14, 13, 13);
+}
+
+.tab-content {
+    display: none; /* Hidden by default */
+    animation: slideIn 0.5s ease;
+    background: #fff9e6;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #1d1c1c;
+}
+
+.tab-flex { display: flex; align-items: center; gap: 30px; }
+.text-side { flex: 1; }
+.img-side img { width: 100%; border-radius: 8px; border: 2px solid #ff8c00; }
+
+.default-open { display: block; }
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* Economy Section */
+.economy-section { padding: 60px 10%; background: #fff9e6; color: rgb(22, 22, 22); text-align: center; }
+.converter-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+#inrInput {
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    width: 200px;
+    font-size: 1.1rem;
+}
+
+.hon-value {
+    background: #ff8c00;
+    padding: 15px 30px;
+    border-radius: 5px;
+    color: rgb(243, 237, 237);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+/* Progress Tracker Styles */
+.fort-tracker { padding: 50px 10%; background: #f8f3f3; text-align: center; }
+
+.progress-bar-container {
+    width: 100%;
+    background:  #fff9e6;
+    border-radius: 20px;
+    margin: 30px 0;
+    overflow: hidden;
+    border: 1px solid #1d1c1c;
+}
+
+#progress-fill {
+    width: 0%;
+    height: 30px;
+    background: linear-gradient(90deg, #ff4500, #ff8c00);
+    color: white;
+    font-weight: bold;
+    line-height: 30px;
+    transition: width 0.5s ease-in-out;
+}
+
+.fort-grid { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+
+.fort-item {
+    padding: 15px 25px;
+    background:  #fff9e6;
+    border: 1px solid #1d1c1c;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.fort-item.captured {
+    background: #f17705;
+    border-color: #fff;
+    transform: scale(1.05);
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Shivaji Maharaj</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">SHIVAJI MAHARAJ</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="quiz.html">Quiz</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="activity.html">Activity</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Navbar End -->
+
+
+<!-- value -->
+ <section class="economy-section">
+    <div class="economy-container">
+        <h3>Swarajya Economy: The 'Hon' Converter</h3>
+        <p>Convert modern Rupees to the Maratha 'Hon' (Gold Coin used in 1674).</p>
+        <div class="converter-box">
+            <input type="number" id="inrInput" placeholder="Enter Amount in ₹" oninput="convertCurrency()">
+            <span class="equals">=</span>
+            <div id="honOutput" class="hon-value">0 Hon</div>
+        </div>
+        <p class="small-note">*1 Hon was roughly equivalent to 3-4 Rupees in the 17th century (Value adjusted for historical context).</p>
+    </div>
+</section>
+
+<section class="fort-tracker">
+    <h2 class="section-title">The Swarajya Progress</h2>
+    <p style="text-align:center;">Mark the forts to see the Empire's strength grow!</p>
+    <div class="tracker-container">
+        <div class="progress-bar-container">
+            <div id="progress-fill">0%</div>
+        </div>
+        <div class="fort-grid">
+            <div class="fort-item" onclick="toggleFort(this, 25)">Torna</div>
+            <div class="fort-item" onclick="toggleFort(this, 25)">Kondhana</div>
+            <div class="fort-item" onclick="toggleFort(this, 25)">Pratapgad</div>
+            <div class="fort-item" onclick="toggleFort(this, 25)">Raigad</div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+ <!-- footer section -->
+  <footer class="bg-dark text-white pt-5">
+        <div class="container text-center pb-3">
+            <h3 class="text-warning">Jai Bhavani, Jai Shivaji</h3>
+            <p>Respectfully preserving the history of the legendary Maratha King.</p>
+            <div class="mt-4">
+                <a href="about.html" class="btn btn-outline-warning btn-sm mx-1">History</a>
+                <a href="quiz.html" class="btn btn-outline-warning btn-sm mx-1">Quiz</a>
+                <a href="activity.html" class="btn btn-outline-warning btn-sm mx-1">Activity</a>
+            </div>
+            <hr class="mt-4 bg-secondary">
+            <p class="small text-secondary mb-0">© 2026 Tribute Website | Developed by jyoti</p>
+        </div>
+    </footer>
+  <!-- footer section end -->
+
+
+
+
+
+
+
+<script>
+  function convertCurrency() {
+    const inr = document.getElementById('inrInput').value;
+    const output = document.getElementById('honOutput');
+    
+    if (inr > 0) {
+        // Historically, 1 Hon ≈ 3.5 Rupees of that era
+        // We will use a symbolic conversion for this tool
+        const honValue = (inr / 350).toFixed(2); 
+        output.innerText = `${honValue} Hon`;
+    } else {
+        output.innerText = "0 Hon";
+    }
+}
+
+// --- 1. FORT TRACKER LOGIC ---
+let currentProgress = 0;
+
+function toggleFort(element, value) {
+    if (!element.classList.contains('captured')) {
+        // Add progress
+        element.classList.add('captured');
+        currentProgress += value;
+        
+        // Celebration on capturing all forts
+        if(currentProgress === 100) {
+            triggerGrandCelebration();
+        }
+    } else {
+        // Remove progress
+        element.classList.remove('captured');
+        currentProgress -= value;
+    }
+    
+    // Update Progress Bar UI
+    const bar = document.getElementById('progress-fill');
+    bar.style.width = currentProgress + "%";
+    bar.innerText = currentProgress + "% Captured";
+}
+
+function triggerGrandCelebration() {
+    alert("The Swarajya is Strong! You have secured the key forts. 🚩");
+    // Triggering the confetti function from previous step
+    confetti({
+        particleCount: 200,
+        spread: 100,
+        origin: { y: 0.6 }
+    });
+}
+
+</script>
+
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+   </body>
+   </html>
